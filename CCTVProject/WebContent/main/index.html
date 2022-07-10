@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<link rel="stylesheet" href="/css/index.css">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id = "wrap">
+		<header class = "upside_bar">
+			<h1><a href = "" onclick = "">WherEyes</a></h1>
+			<div class = "inform">
+				<span class = "inform_txt">Test 문장/Test 문장/Test 문장/Test 문장/Test 문장/Test 문장</span>
+			</div>
+			<ul class = "util">
+				<li class = "btn_a"><a href = "" class = "on">홈</a></li>
+				<li class = "btn_a"><a href = "">정보광장</a></li>
+				<li class = "btn_a"><a href = "/login.jsp">로그인</a></li>
+				<li class = "btn_a"><a href = "/signup.jsp">회원가입</a></li>
+			</ul>
+		</header>
+		<div id = "bg">
+			<div class = "search_part">
+				<div class = "search_part_visual">
+					<div class = "title">
+						<span class = "ir">항상 어느 곳에서나 눈을 가지고 있고, 지켜본다.</span>
+						<span class = "title_txt">WherEyes</span>
+					</div>
+					
+					<!-- title -->
+				<div class = "search d_form">
+					<form>
+						<fieldset>
+							<legend>검색</legend>
+							<label for = "searchword">검색어 입력</label>
+							<input type = "text" id = "searchword" name = "searchword" placeholder = "검색어를 입력해주세요.">
+							<button id = "searchbtn" type = "button" onclick = "">
+								<span class = "searchbtn_txt">검색</span>
+								<span class = "searchbtn_icon"><img src="ico_search.png" alt = "search"></span>
+							</button>
+						</fieldset>
+					</form>
+				</div> <!-- search_form end -->
+				</div> <!-- search_part_visual end -->
+			</div>	<!-- search_part end -->
+			<div class = "content_bg">
+				<div id = "content" class = "content cl">
+					<ul class = "big button">
+						<li onclick = ""> <!-- button1: CCTV -->
+							<span class = "icon"><img src="CCTV.png" class = "img_icon1" alt = "CCTV"></span>
+							<p class = "bigbutton_txt">
+								<a href = "/CCTVProject/CCTVLocation/CCTVLocation.jsp">CCTV위치조회</a>
+							</p>
+						</li>
+						<li onclick = ""> <!-- button2: 비상안심벨 -->
+							<span class = "icon2"><img src="Safebell.png" class = "img_icon2" alt = "SafeBell"></span>
+							<p class = "bigbutton_txt">
+								<a href = "">비상안심벨</a>
+							</p>
+						</li>
+						<li onclick = ""> <!-- button3: 방범대 -->
+							<span class = "icon2"><img src="siren.png" class = "img_icon3" alt = "Siren"></span>
+							<p class = "bigbutton_txt">
+								<a href = "">방범대</a>
+							</p>
+						</li>
+						<li onclick = ""> <!-- button4: 아동안전지킴이집 -->
+							<span class = "icon2"><img src="safechildren.png" class = "img_icon4" alt = "SafeChildren"></span>
+							<p class = "bigbutton_txt">
+								<a href = "">아동안전지킴이집</a>
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>	<!-- content_bg -->
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-latest.js"></script> 
+<meta charset="EUC-KR">
+<link rel="stylesheet" href="index.css">
+
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<title>비상안심벨정보 지도로 검색</title>
+<style>
+.search-div {
+padding-top: 320px;
+width: 1000px;
+height: 30px;
+margin: auto;
+}
+.search-map {
+width: 1330px;
+height: 500px;
+margin: auto;
+padding-bottom: 200px;
+}
+</style>
+</head>
+<body>
+<div id = "wrap">
+<!-- 
+	<header class = "upside_bar">
+		<h1><a href = "" onclick = "">WherEyes</a></h1>
+		<div class = "inform">
+			<span class = "inform_txt">Test 문장/Test 문장/Test 문장/Test 문장/Test 문장/Test 문장</span>
+		</div>
+		<ul class = "util">
+			<li class = "btn_a"><a href = "" class = "on">홈</a></li>
+			<li class = "btn_a"><a href = "">정보광장</a></li>
+			<li class = "btn_a"><a href = "/login.jsp">로그인</a></li>
+			<li class = "btn_a"><a href = "/signup.jsp">회원가입</a></li>
+		</ul>
+	</header>
+	-->
+	
+	<nav style="height: 82px; ">
+		<div class = "navbar-header" style="height: 82px; background-color: #1a4c9a;">
+			<button type = "button" class = "navbar-toggle collapsed"
+				data-toggle = "collapse" data-target = "#bs-example-navbar-collapse-1"
+				aria-expanded = "false">
+				<span class = "icon-bar"></span>
+				<span class = "icon-bar"></span>
+				<span class = "icon-bar"></span>
+				</button>
+				<a class = "navbar-brand" href = "#" style="margin: 18px 10px 10px 18px;float: left;width: 164px;height: 21px; color: white; font-size: 32px;">WherEyes</a>
+		</div>
+		<div class = "collapse navbar-collapse" style="height: 80px; background-color: #1a4c9a; color: white; font-size: 22px;" id = "bs-example-navbar-collapse-1">
+			<ul class = "nav navbar-nav">
+				<li><a href = "/CCTVProject/main/index.jsp" style="color: white; font-size: 20px; margin: 18px 0 0 4px; word-spacing: -2px;">홈</a></li>
+				<li><a href = "bbs.jsp" style="color: white; font-size: 20px; margin: 18px 0 0 4px; word-spacing: -2px;">정보광장</a></li>
+			</ul>
+			<ul class = "nav navbar-nav navbar-right" style="margin: 18px 2px 0 0; color: white;">
+				<li> <a href="#" style="margin: 0 2px 0 0; color: white;">USER MANAGEMENT</a></li>
+				<li class = "dropdown">
+					<a href = "#" class = "dropdown-toggle" style="color: white;"
+						data-toggle = "dropdown" role = "button" aria-haspopup="true"
+						aria-expanded = "false">접속하기<span class = "caret"></span></a>
+					<ul class = "dropdown-menu" >
+						<li><a href = "/CCTVProject/signin/login.jsp">로그인</a></li>
+						<li><a href = "/CCTVProject/signin/registration.jsp">회원 가입</a></li>
+					</ul>
+				</li>
+				<li style="color: red;"> <a href="#" style="margin: 0 2px 0 0; color: red;">LOGOUT</a></li>
+			</ul>
+		</div>
+	</nav>
+	<br>
+	<div class = "content_table_explain">
+		<p style = "font-size:25px; font-weight:bold; text-align:center;">비상안심벨 전국 개수 정보</p>
+	</div>
+	<div id = "etc-data-table" class="data-table">
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script type='text/javascript' src='http://www.google.com/jsapi'></script>
+	<script type='text/javascript'>
+		google.load('visualization', '1', {'packages': ['geochart']});
+		google.setOnLoadCallback(drawVisualization);
+
+ 		function drawVisualization() {var data = new google.visualization.DataTable();
+
+ 		data.addColumn('string', 'Country');
+ 		data.addColumn('number', 'Value');
+ 		data.addColumn({type:'string', role:'tooltip'});var ivalue = new Array();
+
+ 		data.addRows([[{v:'KR-49',f:'제주특별자치도'},0,'0']]);
+ 		ivalue['KR-49'] = '';
+ 
+ 		data.addRows([[{v:'KR-50',f:'세종특별자치시'},1,'23']]);
+ 		ivalue['KR-50'] = '';
+ 		
+ 		data.addRows([[{v:'KR-30',f:'대전광역시'},2,'220']]);
+ 		ivalue['KR-30'] = '';
+ 
+ 		data.addRows([[{v:'KR-29',f:'광주광역시'},3,'243']]);
+ 		ivalue['KR-29'] = '';
+ 
+ 		data.addRows([[{v:'KR-27',f:'대구광역시'},4,'373']]);
+ 		ivalue['KR-27'] = '';
+ 
+ 		data.addRows([[{v:'KR-26',f:'부산광역시'},5,'402']]);
+ 		ivalue['KR-26'] = '';
+ 
+ 		data.addRows([[{v:'KR-47',f:'경상북도'},6,'719']]);
+ 		ivalue['KR-47'] = '';
+ 		
+ 		data.addRows([[{v:'KR-46',f:'전라북도'},7,'721']]);
+ 		ivalue['KR-46'] = '';
+ 
+ 		data.addRows([[{v:'KR-43',f:'충청북도'},8,'863']]);
+ 		ivalue['KR-43'] = '';
+ 
+ 		data.addRows([[{v:'KR-45',f:'전라남도'},9,'935']]);
+ 		ivalue['KR-45'] = '';
+ 		
+ 		data.addRows([[{v:'KR-42',f:'강원도'},10,'1,509']]);
+ 		ivalue['KR-42'] = '';
+ 		
+ 		data.addRows([[{v:'KR-48',f:'경상남도'},11,'2,156']]);
+ 		ivalue['KR-48'] = '';
+ 		
+ 		data.addRows([[{v:'KR-31',f:'울산광역시'},12,'2,442']]);
+		ivalue['KR-31'] = '';
+ 
+		data.addRows([[{v:'KR-44',f:'충청남도'},13,'2,717']]);
+	 	ivalue['KR-44'] = '';
+ 
+ 		data.addRows([[{v:'KR-28',f:'인천광역시'},14,'3,509']]);
+ 		ivalue['KR-28'] = '';
+ 
+ 		data.addRows([[{v:'KR-11',f:'서울특별시'},15,'20,818']]); 
+ 		ivalue['KR-11'] = '';
+
+ 		data.addRows([[{v:'KR-41',f:'경기도'},16,'23,652']]);
+ 		ivalue['KR-41'] = '';
+
+ 		var options = {
+ 		backgroundColor: {fill:'transparent',stroke:'#FFFFFF' ,strokeWidth:0 },
+ 		colorAxis:  {minValue: 0, maxValue: 26,  colors: ['#EBFBFF','#CDECFA','#6EE0FF','#5AE0FF','#50D6FF','#46CCFF','#3CC2FF','#32B8FF','#28AEFF','#1EA4FF','#289AFF','#1E90FF',
+															'#0A82FF','#0078FF','#0A6EFF','#0064FF','#3232FF',]},
+ 		legend: 'none',
+ 		backgroundColor: {fill:'transparent',stroke:'#FFFFFF' ,strokeWidth:0 },
+ 		datalessRegionColor: '#f5f5f5',
+ 		displayMode: 'regions',
+		enableRegionInteractivity: 'true',
+ 		resolution: 'provinces',
+ 		sizeAxis: {minValue: 1, maxValue:1,minSize:10,  maxSize: 10},
+ 		region:'KR',
+ 		keepAspectRatio: true,
+ 		width:1400,
+ 		height:800,
+ 		tooltip: {textStyle: {color: '#444444'}, trigger:'focus'}
+ 		};
+  		var chart = new google.visualization.GeoChart(document.getElementById('visualization'));
+ 		chart.draw(data, options);
+ 		}
+ 	</script>
+ 	<div id='visualization' class = "search-map"></div>
+	</div>	<!-- Chart end -->		
+	<div class = "search-div">
+		<table style="text-align: center">
+			<tr align="center">
+				<td>주소&nbsp;</td>
+				<td><input type="text" name="detailAddress" id="address" style="width:800px; height: 38px"></td>
+				<td><button type="button" id="searchBtn" style=" width:100px; height: 39px; margin : 7px 0;">검색</button></td>
+			</tr>
+		</table>
+	</div>
+	
+	<br><br><br>
+	<div id="map" style="width:1330px;height:700px;margin:auto;"></div>
+</div>
+   
+	<!-- kakao API -->
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=13345dc50e5e1e833386e733f22a486b&libraries=services"></script>
+	<script>
+	var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+	    mapOption = {
+	        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+	        level: 3 // 지도의 확대 레벨
+	    };  
+	
+	
+	$('#searchBtn').click(function(){
+		// 버튼을 click했을때
+		
+		// 지도를 생성합니다    
+		var map = new kakao.maps.Map(mapContainer, mapOption); 
+		
+		// 주소-좌표 변환 객체를 생성합니다
+		var geocoder = new kakao.maps.services.Geocoder();
+		
+		// 주소로 좌표를 검색합니다
+		geocoder.addressSearch($('#address').val(), function(result, status) {
+	
+		    // 정상적으로 검색이 완료됐으면 
+		     if (status === kakao.maps.services.Status.OK) {
+		        var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+		        
+		        // 추출한 좌표를 통해 도로명 주소 추출
+		        let lat = result[0].y;
+		        let lng = result[0].x;
+		        getAddr(lat,lng);
+		        function getAddr(lat,lng){
+		            let geocoder = new kakao.maps.services.Geocoder();
+	
+		            let coord = new kakao.maps.LatLng(lat, lng);
+		            let callback = function(result, status) {
+		                if (status === kakao.maps.services.Status.OK) {
+		                	// 추출한 도로명 주소를 해당 input의 value값으로 적용
+		                    $('#address').val(result[0].road_address.address_name);
+		                }
+		            }
+		            geocoder.coord2Address(coord.getLng(), coord.getLat(), callback);
+		        }
+		        
+		        // 결과값으로 받은 위치를 마커로 표시합니다
+		        var marker = new kakao.maps.Marker({
+		            map: map,
+		            position: coords
+		        });
+	
+		        // 인포윈도우로 장소에 대한 설명을 표시합니다
+		        var infowindow = new kakao.maps.InfoWindow({
+		            content: '<div style="width:150px;text-align:center;padding:6px 0;">비상안심벨</div>'
+		        });
+		        infowindow.open(map, marker);
+	
+		        // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+		        map.setCenter(coords);
+		    } 
+		});  
+	});
+	  
+	</script>
+</body>
+</html>
